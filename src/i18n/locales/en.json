@@ -1,0 +1,16 @@
+{
+  "common": {
+    "welcome": "Welcome to use this template",
+    "login": "Login",
+    "logout": "Logout",
+    "username": "Please input username",
+    "password": "Please input password",
+    "loginFailed": "Login failed",
+    "chinese": "Chinese",
+    "english": "English"
+  },
+  "home": {
+    "title": "Home",
+    "description": "This is a template project"
+  }
+}

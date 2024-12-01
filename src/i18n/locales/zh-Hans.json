@@ -1,0 +1,16 @@
+{
+  "common": {
+    "welcome": "欢迎使用本模板",
+    "login": "登录",
+    "logout": "退出登录",
+    "username": "请输入用户名",
+    "password": "请输入密码",
+    "loginFailed": "登录失败",
+    "chinese": "中文",
+    "english": "英文"
+  },
+  "home": {
+    "title": "首页",
+    "description": "这是一个模板项目"
+  }
+}

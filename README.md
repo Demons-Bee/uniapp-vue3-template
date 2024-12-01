@@ -8,11 +8,13 @@
 - TypeScript 4.9 - 类型支持
 - Vite 5.2 - 构建工具
 - Pinia 2.1 - 状态管理
+- Vue I18n - 国际化支持
 - SCSS - 样式预处理器
 - ESLint + Prettier - 代码规范
 - Uni-App - 跨端框架
 
 ## 项目结构
+
 ```bash
 .
 ├── .vscode/                # VSCode 配置
@@ -37,6 +39,9 @@
 │   ├── pages/           # 页面文件
 │   │   ├── index/      # 首页
 │   │   └── login/      # 登录页
+│   ├── i18n/           # 国际化配置
+│   │   ├── config.ts   # i18n 配置
+│   │   └── locales/    # 语言文件
 │   ├── static/         # 静态资源
 │   │   ├── images/     # 图片资源
 │   │   └── tabbar/     # TabBar 图标
@@ -73,6 +78,7 @@
 ## 核心功能
 
 ### 请求封装 (src/api/base/request.ts)
+
 - 统一的请求拦截器
 - 响应数据处理
 - 错误处理
@@ -80,22 +86,39 @@
 - Loading 控制
 
 ### 路由管理 (src/utils/router.ts)
+
 - 类型安全的路由跳转
 - 参数类型检查
 - 防抖处理
 - 页面返回数据传递
 
 ### 状态管理 (src/stores/)
+
 - Pinia 状态管理
 - 持久化支持
 - 类型安全
 
 ### Mock 数据 (src/api/mock/)
+
 - 本地模拟数据
 - 可配置的响应延迟
 - 环境变量控制
 
+### 国际化支持 (src/i18n/)
+
+- Vue I18n 集成
+- 中英文支持
+- 语言切换持久化
+- 自动跟随系统语言
+- 支持页面标题国际化
+
+```vue
+<!-- 使用示例 -->
+<text>{{ $t('common.welcome') }}</text>
+```
+
 ### 样式管理
+
 - SCSS 预处理
 - Mixins 复用
 - 主题变量
@@ -104,11 +127,13 @@
 ## 开发指南
 
 ### 安装依赖
+
 ```bash
 npm install
 ```
 
 ### 开发
+
 ```bash
 H5
 npm run dev:h5
@@ -118,6 +143,7 @@ npm run dev:mp-weixin
 ```
 
 ### 构建
+
 ```bash
 H5
 npm run build:h5
@@ -127,6 +153,7 @@ npm run build:mp-weixin
 ```
 
 ### 类型检查
+
 ```bash
 npm run type-check
 ```
@@ -139,6 +166,7 @@ npm run type-check
 ## 注意事项
 
 1. 确保已安装相关编辑器插件
+
    - Volar
    - ESLint
    - Prettier
