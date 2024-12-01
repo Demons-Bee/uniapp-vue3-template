@@ -1,5 +1,3 @@
-import { ref, watch } from 'vue'
-
 interface StorageData<T> {
   data: T
   expire?: number
@@ -26,7 +24,7 @@ class Storage {
     // 监听变化自动存储
     watch(
       data,
-      (newValue) => {
+      (newValue: T) => {
         this.set(key, newValue, expire)
       },
       { deep: true }
